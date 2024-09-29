@@ -37,6 +37,12 @@ from trl import (
     get_quantization_config,
 )
 
+os.environ["HUGGINGFACE_CACHE"] = "/workspace/.cache/huggingface"
+# os.environ["DATA_DIR"] = "./data"
+os.environ["HF_DATASETS_CACHE"] = os.path.join(os.environ["HUGGINGFACE_CACHE"], "datasets")
+os.environ["HF_HOME"] = os.environ["HUGGINGFACE_CACHE"]
+os.environ["TRANSFORMERS_CACHE"] = os.path.join(os.environ["HUGGINGFACE_CACHE"], "transformers")
+
 """
 # post sft:
 python examples/scripts/srpo/srpo_tldr.py \
@@ -48,7 +54,7 @@ python examples/scripts/srpo/srpo_tldr.py \
     --eval_steps=100 \
     --eval_strategy="steps" \
     --save_steps=100 \
-    --output_dir="srpo_tldr_peft_fix" \
+    --output_dir="srpo_rewrite_test" \
     --logging_first_step \
     --no_remove_unused_columns \
     --report_to=wandb \

@@ -32,7 +32,7 @@ _import_structure = {
     "dpo_config": ["DPOConfig", "FDivergenceConstants", "FDivergenceType"],
     "dpo_trainer": ["DPOTrainer"],
     "srpo_config": ["SRPOConfig"],
-    "srpo_trainer": ["SRPOTrainer"],
+    "srpo_trainer_2": ["SRPOTrainer"],
     "cpo_config": ["CPOConfig"],
     "cpo_trainer": ["CPOTrainer"],
     "alignprop_config": ["AlignPropConfig"],
